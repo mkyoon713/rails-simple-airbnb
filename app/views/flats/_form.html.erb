@@ -1,0 +1,40 @@
+<%= simple_form_for(@flat) do |f| %>
+  <% if @flat.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% flat.errors.full_message.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form_control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form_control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form_control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price_per_night %>
+    <%= f.text_field :price_per_night, class: 'form_control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :number_of_guests %>
+    <%= f.text_field :number_of_guests, class: 'form_control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+
